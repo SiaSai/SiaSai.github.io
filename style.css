@@ -1,0 +1,146 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3{
+    margin: 0;
+}
+img{
+    height: 100%;
+    width: 100%;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url(2.png);
+    background-size:175%;
+    background-position: center;
+}
+
+.header{
+   width: 100%; 
+   padding:15px 0;
+   text-align:center;
+   font-size: 24px;
+   font-weight: 300;
+   color:gray;
+}
+.header_logo{
+    color: rgba(85, 85, 82, 0.92);
+    text-decoration: none;
+}
+.hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conteiner {
+    max-width: 1230px; 
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.hero_container{
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit,
+    minmax(290px,1fr));
+    grid-gap:20px;
+}
+.hero_about{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.hero_title{
+    font-size:70px ;
+    margin-bottom: 0px;
+    line-height: 1.1;
+}
+.hero_subtitle{
+    font-size: 32px;
+    font-weight: 400;
+}
+.hero_links{
+    display:flex;
+   
+    
+}
+.hero_link{
+margin-right: 10px;
+font-size: 30px;
+color: black;
+transition: color 0.3s ;
+}
+.hero_link:hover{
+color: #31c8ee;
+}
+.hero_box{
+    max-width: 500px;
+    justify-self: center;
+    overflow: hidden;
+    background-image:linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    border: 10px solid #bed3d5;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    animation:foto-animation 5s infinite alternate;
+    
+}
+.hero_box_img{
+    animation: foto-bg 3s infinite alternate;
+}
+
+@keyframes foto-animation {
+    0%{
+        border-radius:68% 32% 73% 27% / 25% 58% 42% 75% ; 
+    }
+    40% {
+        border-radius:53% 47% 65% 35% / 9% 94% 6% 91% ;
+    }
+    60%{
+        border-radius:60% 40% 30% 70% / 66% 51% 49% 34% ;
+    }
+    100%{
+        border-radius:86% 14% 46% 54% / 18% 76% 24% 82% ;
+    }
+ }
+@keyframes foto-bg {
+    from {
+        backdrop-filter: hue-rotate(0);
+    }
+    to{
+        backdrop-filter: hue-rotate(360deg)
+    }
+ }
+@media screen and (max-width:978px){
+    .hero {
+        padding-top: 30px;
+    }
+    .hero_container{
+        grid-row-gap: 20px;
+    }
+    .hero_title{
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+    .hero_subtitle{
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .hero_description{
+        font-size: 14px;
+    }
+    .hero_about{
+        text-align: center;
+    }
+    .hero_links{
+        justify-content: center;
+    }
+    .hero_box{
+        max-width: 350px;
+    }
+ }
